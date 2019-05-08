@@ -1,0 +1,32 @@
+{
+    "name": "rtdigital-react-components",
+    "version": "0.0.1",
+    "main": "./dist/rtdigital-react-components.js",
+    "scripts": {
+        "dev": "env NODE_ENV=development ./node_modules/.bin/webpack --mode development",
+        "build": "env NODE_ENV=production ./node_modules/.bin/webpack --mode production",
+        "docz:dev": "./node_modules/.bin/docz dev",
+        "docz:build": "./node_modules/.bin/docz build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NetoBraghetto/react-components.git"
+    },
+    "author": "Neto Braghetto <netow93@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "docz": "^1.1.0",
+        "docz-theme-default": "^1.1.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.4.4",
+        "@babel/preset-env": "^7.4.4",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.5",
+        "prop-types": "^15.7.2",
+        "react": "^16.8.2",
+        "react-dom": "^16.8.2",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.2"
+    }
+}
