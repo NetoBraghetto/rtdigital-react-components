@@ -1,5 +1,5 @@
 export default {
-    files: './src/**/*.md',
+    files: './src/js/**/*.md',
 	htmlContext: {
 		head: {
 			links: [
