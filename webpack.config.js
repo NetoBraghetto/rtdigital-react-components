@@ -1,7 +1,11 @@
 const path = require('path');
+const TerserJSPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+// const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-	entry: './src/js/index.js',
+	entry: './src/index.js',
 	module: {
 		rules: [
 			{
@@ -14,14 +18,14 @@ module.exports = {
                     }
                 }
 			},
-			// {
-			// 	test: /\.scss$/,
-			// 	use: [
-			// 		{ loader: 'style-loader' },
-			// 		{ loader: 'css-loader' },
-			// 		{ loader: 'sass-loader' },
-			// 	],
-			// },
+			{
+				test: /\.scss$/,
+				use: [
+					{ loader: MiniCssExtractPlugin.loader },
+					{ loader: 'css-loader' },
+					{ loader: 'sass-loader' },
+				],
+			},
 			// {
 			// 	test: /\.(png|gif|jpg|svg)$/,
 			// 	use: {
@@ -33,6 +37,22 @@ module.exports = {
 			// },
 		],
 	},
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "rtdigital-react-components.min.css",
+            chunkFilename: "[id].css"
+        })
+    ],
+    optimization: {
+        minimizer: [
+            new TerserJSPlugin({
+                terserOptions: {
+                    safari10: true,
+                },
+            }),
+            new OptimizeCSSAssetsPlugin({})
+        ],
+    },
 	resolve: {
 		extensions: ['.scss', '.js', '.json', '.png', '.gif', '.jpg', '.svg'],
 	},
