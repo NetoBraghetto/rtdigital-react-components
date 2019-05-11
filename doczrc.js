@@ -1,3 +1,5 @@
+import { css } from 'docz-plugin-css';
+
 export default {
     files: './src/js/**/*.md',
 	htmlContext: {
@@ -10,5 +12,10 @@ export default {
 			],
 		},
 	},
+    plugins: [
+        css({
+            preprocessor: 'sass'
+        })
+    ],
 	themeConfig: {},
 };

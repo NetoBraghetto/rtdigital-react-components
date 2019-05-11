@@ -3,7 +3,8 @@ name: Loading
 ---
 # Loading
 
-import { Loading } from './Loading'
+import './../../../styles/loading.scss';
+import { Loading } from './Loading';
 
 <Loading text="Enviando..." />
 
