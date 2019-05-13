@@ -11,7 +11,7 @@ import { Loading } from './Loading';
 ## Usage
 
 ```jsx
-<Loading />
+<Loading text="Enviando..." />
 ```
 
 ## Props

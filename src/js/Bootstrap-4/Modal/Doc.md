@@ -3,9 +3,9 @@ name: Modal
 ---
 # Modal
 
-import { ModalExample } from './ModalExample';
+import Example from './Example';
 
-<ModalExample />
+<Example />
 
 ## Usage
 
@@ -74,5 +74,4 @@ export class ModalExample extends Component {
 
 ModalExample.displayName = 'ModalExample';
 export default ModalExample;
-
 ```

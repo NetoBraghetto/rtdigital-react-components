@@ -2,11 +2,18 @@ import React, { Component } from 'react';
 
 export class Loading extends Component {
     render() {
+        let text = null;
+        if (this.props.text !== undefined) {
+            text = <div className="loading-text">{ this.props.text }</div>;
+        }
         return (
-            <div className="loading">
-                <div className="ellipsis ellipsis-1"></div>
-                <div className="ellipsis ellipsis-2"></div>
-                <div className="ellipsis ellipsis-3"></div>
+            <div>
+                <div className="loading">
+                    <div className="ellipsis ellipsis-1"></div>
+                    <div className="ellipsis ellipsis-2"></div>
+                    <div className="ellipsis ellipsis-3"></div>
+                </div>
+                { text }
             </div>
         );
     }

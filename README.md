@@ -7,7 +7,7 @@ My React Components used cross projects
 ## Install
 
 ```
-yarn add react-select
+yarn add rtdigital-react-components
 ```
 
 [Documentation](https://rtdigital-react-components.netlify.com/)
