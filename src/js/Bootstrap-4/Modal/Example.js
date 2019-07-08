@@ -44,4 +44,5 @@ export class ModalExample extends Component {
 }
 
 ModalExample.displayName = 'ModalExample';
+
 export default ModalExample;
