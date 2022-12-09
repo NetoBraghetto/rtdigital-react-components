@@ -15,7 +15,7 @@
     "author": "Neto Braghetto <netow93@gmail.com>",
     "license": "MIT",
     "dependencies": {
-        "qs": "^6.7.0"
+        "qs": "^6.7.3"
     },
     "devDependencies": {
         "@babel/core": "^7.4.4",
